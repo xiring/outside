@@ -27,7 +27,7 @@ export class AddProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.products)
+    
   }
 
 
@@ -39,5 +39,7 @@ export class AddProductComponent implements OnInit {
     customObj.description = productData.description; 
     this.products.push(customObj);
     this.addProductForm.reset();
+
+    console.warn('Your product has been submitted', productData);
   }
 }

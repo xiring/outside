@@ -1,0 +1,14 @@
+<h3>Add Payment Option</h3>
+
+<form [formGroup]="addPaymentForm" (ngSubmit)="onSubmit(addPaymentForm.value)">
+
+    <div>
+      <label for="name">
+        Name
+      </label>
+      <input id="name" type="text" formControlName="name" required>
+    </div>
+  
+    <button class="button" type="submit">Submit</button>
+  
+</form>
