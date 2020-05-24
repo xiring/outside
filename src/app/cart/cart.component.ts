@@ -22,6 +22,7 @@ export class CartComponent implements OnInit {
       name: '',
       address: '',
       paymentOption: '',
+      quantity: '',
     });
   }
 
@@ -39,7 +40,7 @@ export class CartComponent implements OnInit {
     cart_items.forEach(function (value) {
       item+=value['name'];
     });
-    console.warn('User selected a ' + item + ' and paid $' + sum + ' with ' + customerData.paymentOption);
+    console.warn(customerData.name + ' selected a ' + item + ' and paid $' + customerData.quantity * sum + ' with ' + customerData.paymentOption);
     this.items = this.cartService.clearCart();
     this.checkoutForm.reset();
   }
