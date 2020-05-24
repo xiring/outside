@@ -61,6 +61,14 @@ input {
   border: 1px solid #BDBDBD;
 }
 
+select {
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #BDBDBD;
+}
+
 label {
   font-size: 12px;
   font-weight: bold;
@@ -124,7 +132,7 @@ app-top-bar h1 {
 
 /* Checkout Cart, Shipping Prices */
 
-.cart-item, .shipping-item {
+.cart-item {
   width: 100%;
   min-width: 400px;
   max-width: 450px;
