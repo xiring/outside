@@ -25,8 +25,9 @@
     <label for="address">
       Payment Option
     </label>
-    <select id="paymentOption" formContolName="paymentOption">
+    <select id="paymentOption" formControlName="paymentOption">
       <option value="" selected disabled>Please select</option>
+      <option *ngFor="let paymentOption of paymentOptions;" value="{{ paymentOption.name }}">{{ paymentOption.name }}</option>
     </select>
   </div>
 
