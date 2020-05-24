@@ -30,10 +30,17 @@ export class CartComponent implements OnInit {
   }
 
   onSubmit(customerData) {
-    // Process checkout data here
+    var cart_items = this.cartService.getItems();
+    let sum = 0;
+    let item = '';
+    cart_items.forEach(function (value) {
+      sum+=value['price'];
+    });
+    cart_items.forEach(function (value) {
+      item+=value['name'];
+    });
+    console.warn('User selected a ' + item + ' and paid $' + sum + ' with ' + customerData.paymentOption);
     this.items = this.cartService.clearCart();
     this.checkoutForm.reset();
-
-    console.warn('Your order has been submitted', customerData);
   }
 }
